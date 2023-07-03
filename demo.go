@@ -6,13 +6,13 @@ import (
 )
 
 func main() {
-	client := fastposter.Client("26d64614342acb1a40b3")
+	client := fastposter.Client("07657854eb3858269c76")
 
 	params := map[string]interface{}{
 		"name": "测试文本",
 	}
 
-	poster, err := client.BuildPoster("5c11c65cca7840ed", params, "png")
+	poster, err := client.BuildPoster("4b9423a28e594ac5", params, "png")
 	if err != nil {
 		fmt.Println("Error:", err)
 		return

@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	CLIENT_VERSION = "0.2.0"
+	CLIENT_VERSION = "1.0.0"
 	CLIENT_TYPE    = "go"
 	ENDPOINT       = "https://api.fastposter.net"
 )
