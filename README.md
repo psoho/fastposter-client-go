@@ -13,9 +13,7 @@
 ## 安装
 
 ```bash
-import (
-	"github.com/psoho/fastposter-client-go/fastposter"
-)
+go get github.com/psoho/fastposter-client-go
 ```
 
 ## 使用
