@@ -63,10 +63,10 @@ func Client(token string) *_Client {
 	}
 }
 
-func ClientWithEndpoint(token string, endpoint *string) *_Client {
+func ClientWithEndpoint(token string, endpoint string) *_Client {
 	return &_Client{
 		Token:    token,
-		Endpoint: *endpoint,
+		Endpoint: endpoint,
 	}
 }
 

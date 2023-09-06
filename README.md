@@ -26,26 +26,25 @@ import (
 )
 
 func main() {
+
+	// 创建海报客户端
 	client := fastposter.Client("07657854eb3858269c76")
 
+	// 设置参数
 	params := map[string]interface{}{
 		"name": "测试文本",
 	}
 
+	// 生成海报
 	poster, err := client.BuildPoster("4b9423a28e594ac5", params, "png")
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
 	}
 
-	//fmt.Println("Error:", poster.B64String())
-	err = poster.SaveTo("demo.png")
-	if err != nil {
-		fmt.Println("Error:", err)
-		return
-	}
+	//fmt.Println("B64:", poster.B64String())
+	poster.Save()
 }
-
 ```
 
 ## 效果
@@ -56,7 +55,7 @@ func main() {
 ## 版本发布
 
 ```bash
-git tag 0.1.0
+git tag 1.1.0
 git push --tag
 ```
 

@@ -6,22 +6,22 @@ import (
 )
 
 func main() {
-	client := fastposter.Client("07657854eb3858269c76")
 
+	// 创建海报客户端
+	client := fastposter.ClientWithEndpoint("ApfrIzxCoK1DwNZOEJCwlrnv6QZ0PCdv", "http://127.0.0.1:5000")
+
+	// 设置参数
 	params := map[string]interface{}{
-		"name": "测试文本",
+		"name": "测试文本撒旦法",
 	}
 
-	poster, err := client.BuildPoster("4b9423a28e594ac5", params, "png")
+	// 生成海报
+	poster, err := client.BuildPoster("de9a1007d3dbffbe", params, "png")
 	if err != nil {
 		fmt.Println("Error:", err)
 		return
 	}
 
-	//fmt.Println("Error:", poster.B64String())
-	err = poster.SaveTo("demo.png")
-	if err != nil {
-		fmt.Println("Error:", err)
-		return
-	}
+	//fmt.Println("B64:", poster.B64String())
+	poster.Save()
 }
