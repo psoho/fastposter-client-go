@@ -56,10 +56,14 @@ type _Client struct {
 	Endpoint string
 }
 
-func Client(token string) *_Client {
+func Client(token string, endPoint ...string) *_Client {
+	url := ENDPOINT
+	if len(endPoint) == 1 {
+		url = endPoint[0]
+	}
 	return &_Client{
 		Token:    token,
-		Endpoint: ENDPOINT,
+		Endpoint: url,
 	}
 }
 
